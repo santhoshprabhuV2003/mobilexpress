@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "65082ec97bad30a106457809"
+  },
+  "pid": 101,
+  "name": "iPhone 13 Pro",
+  "company": "Apple",
+  "rating": 4.5,
+  "price": 115900,
+  "description": "A powerful and advanced iPhone model with stunning features.",
+  "imgsrc": "phone/phone1.jpg"
+},
+{
+  "_id": {
+    "$oid": "65082f3b7bad30a10645780b"
+  },
+  "pid": 102,
+  "name": "Galaxy S21 Ultra",
+  "company": "Samsung",
+  "rating": 4.5,
+  "price": 102999,
+  "description": "Experience the ultimate in smartphone technology with the Galaxy S21 Ultra.",
+  "imgsrc": "phone/phone2.jpg"
+},
+{
+  "_id": {
+    "$oid": "65082f3b7bad30a10645780c"
+  },
+  "pid": 103,
+  "name": "Realme 8 Pro",
+  "company": "Realme",
+  "rating": 4,
+  "price": 21999,
+  "description": "Capture moments in exceptional clarity with the Realme 8 Pro's camera.",
+  "imgsrc": "phone/phone3.jpg"
+},
+{
+  "_id": {
+    "$oid": "65082f3b7bad30a10645780d"
+  },
+  "pid": 104,
+  "name": "OnePlus 10T",
+  "company": "OnePlus",
+  "rating": 4,
+  "price": 59990,
+  "description": "Elevate your photography game with the OnePlus 10T smartphone.",
+  "imgsrc": "phone/phone4.jpg"
+},
+{
+  "_id": {
+    "$oid": "65082f3b7bad30a10645780e"
+  },
+  "pid": 105,
+  "name": "OnePlus 9 Pro",
+  "company": "OnePlus",
+  "rating": 4,
+  "price": 64999,
+  "description": "Experience speed and performance with the OnePlus 9 Pro.",
+  "imgsrc": "phone/phone5.jpg"
+},
+{
+  "_id": {
+    "$oid": "65082f3b7bad30a10645780f"
+  },
+  "pid": 106,
+  "name": "Mi 11X Pro",
+  "company": "Xiaomi",
+  "rating": 4,
+  "price": 39999,
+  "description": "An exceptional smartphone with a high-quality camera system.",
+  "imgsrc": "phone/phone6.jpg"
+},
+{
+  "_id": {
+    "$oid": "65082f3b7bad30a106457810"
+  },
+  "pid": 107,
+  "name": "Oppo 6 Pro",
+  "company": "Oppo",
+  "rating": 4.5,
+  "price": 71999,
+  "description": "Unleash the power of AI photography with the Oppo 6 Pro.",
+  "imgsrc": "phone/phone7.jpg"
+},
+{
+  "_id": {
+    "$oid": "65082f3b7bad30a106457811"
+  },
+  "pid": 108,
+  "name": "Oppo Find X3 Pro",
+  "company": "Oppo",
+  "rating": 4,
+  "price": 69990,
+  "description": "Discover true colors and innovative design with the Oppo Find X3 Pro.",
+  "imgsrc": "phone/phone8.jpg"
+},
+{
+  "_id": {
+    "$oid": "65082f3b7bad30a106457812"
+  },
+  "pid": 109,
+  "name": "S Flip",
+  "company": "Samsung",
+  "rating": 4,
+  "price": 54999,
+  "description": "Experience a unique flip camera design sets the S Flip apart.",
+  "imgsrc": "phone/phone9.jpg"
+},
+{
+  "_id": {
+    "$oid": "65082f3b7bad30a106457813"
+  },
+  "pid": 110,
+  "name": "Realme Narzo 50A",
+  "company": "Realme",
+  "rating": 3.5,
+  "price": 17999,
+  "description": "Experience advanced features at an affordable price with the Narzo 50A.",
+  "imgsrc": "phone/phone10.jpg"
+}]
