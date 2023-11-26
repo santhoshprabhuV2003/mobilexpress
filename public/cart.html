@@ -1,0 +1,33 @@
+<header>
+    <nav>
+    <ul class="nav_links">
+        <li><a href="#!/">HOME</a></li>
+        <li><a href="#!/products">OUR PRODUCTS</a></li>
+        <li><a href="#!/cart">CART</a></li>
+        <li><a href="#!/aboutus">ABOUT US</a></li>
+        <li><a href="#!/login" ng-if="!username">LOGIN</a></li>
+        <li><a ng-if="username" ng-click="logout()">LOGOUT</a></li>
+    </ul>
+    </nav>
+    <a href="#!/signup" class="nav_button" ng-if="!username"><button>SIGN UP</button></a>
+    <a href="#!/" class="nav_button" ng-if="username"><button>{{username | uppercase}}</button></a>
+</header>
+
+<div class="cart">
+<h2>Items</h2>
+<hr>
+<div class="card" ng-repeat="item in cartItems">
+    <div class="images">
+        <img ng-src="{{item.imgsrc}}" alt="{{item.name}}">
+    </div>
+    <div class="caption">
+        <p class="name">{{item.name}}</p>
+        <p class="company">{{item.company}}</p>
+        <p class="price"><b>{{item.price | currency : "Rs." : 2}}</b></p>
+        <button class="remove" ng-click="removeItemFromCart($index)">Remove from Cart</button>
+    </div>
+</div>
+<div class="total-price-container">
+    <p class="total-price"><b>{{ totalPrice | currency : "Rs. " : 2 }}</b></p>
+</div>
+</div>

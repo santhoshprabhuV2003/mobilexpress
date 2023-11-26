@@ -1,0 +1,50 @@
+<header>
+    <nav>
+    <ul class="nav_links">
+        <li><a href="#!/">HOME</a></li>
+        <li><a href="#!/products">OUR PRODUCTS</a></li>
+        <li><a href="#!/cart">CART</a></li>
+        <li><a href="#!/aboutus">ABOUT US</a></li>
+        <li><a href="#!/login" ng-if="!username">LOGIN</a></li>
+        <li><a ng-if="username" ng-click="logout()">LOGOUT</a></li>
+    </ul>
+    </nav>
+    <a href="#!/signup" class="nav_button" ng-if="!username"><button>SIGN UP</button></a>
+    <a href="#!/" class="nav_button" ng-if="username"><button>{{username | uppercase}}</button></a>
+</header>
+
+<div>
+    <img class="mobilexpress" ng-src='{{home.imagesource}}'/>
+</div>
+    
+<div class="service-head">
+    <p>Our Services</p>
+</div>
+    
+<div class="main-area">
+    <div class="centered">
+    <div class="service-cards">
+        <article class="service-card" ng-repeat="service in services">
+            <a href="">
+            <picture class="thumbnail">
+                <img class="service-img" ng-src='{{service.imagesource}}' alt="">
+            </picture>
+            <div class="card-content">
+                <h2>{{service.title | uppercase}}</h2>
+                <p>{{service.description}}</p>
+            </div>
+            </a>
+        </article>
+    </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <a href=""><i class="fa fa-instagram fa-2x social"></i></a>
+        <a href=""><i class="fa fa-facebook fa-2x social"></i></a>
+        <a href=""><i class="fa fa-twitter fa-2x social"></i></a>
+        <a href=""><i class="fa fa-linkedin fa-2x social"></i></a>
+        <a href=""><i class="fa fa-youtube-play fa-2x social"></i></a>
+    </div>
+</footer>

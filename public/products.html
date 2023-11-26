@@ -1,0 +1,53 @@
+<header>
+    <nav>
+    <ul class="nav_links">
+        <li><a href="#!/">HOME</a></li>
+        <li><a href="#!/products">OUR PRODUCTS</a></li>
+        <li><a href="#!/cart">CART</a></li>
+        <li><a href="#!/aboutus">ABOUT US</a></li>
+        <li><a href="#!/login" ng-if="!username">LOGIN</a></li>
+        <li><a ng-if="username" ng-click="logout()">LOGOUT</a></li>
+    </ul>
+    </nav>
+    <a href="#!/signup" class="nav_button" ng-if="!username"><button>SIGN UP</button></a>
+    <a href="#!/" class="nav_button" ng-if="username"><button>{{username | uppercase}}</button></a>
+</header>
+
+<div ng-controller="productsctrl">
+    <div class="product-list-container">
+        <div class="filter-section">
+            <p class="filter-title">Filter by Company</p>
+            <div class="filter-data">
+                <select class="filter-dropdown" ng-model="selectedCompany">
+                    <option value="">All Companies</option>
+                    <option ng-repeat="company in companies" value="{{company}}">{{company}}</option>
+                </select>
+            </div>
+    
+            <p class="filter-title">Filter by Price</p>
+            <div class="filter-data">
+                <label><input type="radio" name="priceRange" ng-model="selectedPriceRange" value="lt20000"> &lt; 20,000</label>
+                <label><input type="radio" name="priceRange" ng-model="selectedPriceRange" value="20001-40000"> 20,001 - 40,000</label>
+                <label><input type="radio" name="priceRange" ng-model="selectedPriceRange" value="40001-60000"> 40,001 - 60,000</label>
+                <label><input type="radio" name="priceRange" ng-model="selectedPriceRange" value="60001-80000"> 60,001 - 80,000</label>
+                <label><input type="radio" name="priceRange" ng-model="selectedPriceRange" value="gt80000"> &gt; 80,000</label>
+            </div>
+    
+            <p class="filter-title">Sort by Price</p>
+            <div class="filter-data">
+                <label><input type="radio" ng-model="sortBy" value="default"> Default</label>
+                <label><input type="radio" ng-model="sortBy" value="lowToHigh"> Low to High</label>
+                <label><input type="radio" ng-model="sortBy" value="highToLow"> High to Low</label>
+            </div>
+        </div>
+    
+        <h1 class="product-header">Our Products</h1>
+        <div class="products-container">
+            <div class="product-cards">
+                <div ng-repeat="product in filteredProducts | filter: selectedCompany">
+                    <product product="product" add-item-to-checkout="addToCart(product)"></product>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

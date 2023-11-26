@@ -1,0 +1,29 @@
+<header>
+    <nav>
+    <ul class="nav_links">
+        <li><a href="#!/">HOME</a></li>
+        <li><a href="#!/products">OUR PRODUCTS</a></li>
+        <li><a href="#!/cart">CART</a></li>
+        <li><a href="#!/aboutus">ABOUT US</a></li>
+        <li><a href="#!/login">LOGIN</a></li>
+    </ul>
+    </nav>
+    <a href="#!/signup" class="nav_button"><button>SIGN UP</button></a>
+</header>
+
+<div class="signup">
+    <h2>Login</h2>
+    <p>Please fill this form to Login!!</p>
+    <form ng-submit="login()" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="field" ng-model="userData.username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="field" ng-model="userData.password" ng-minlength="6" ng-maxlength="10" required>
+        </div>
+        <button type="submit">LOGIN</button>
+        <p>Don't have an account? <a href="#!/signup">Click here to Sign Up</a></p>
+    </form>
+</div>

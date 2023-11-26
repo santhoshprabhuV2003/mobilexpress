@@ -1,0 +1,80 @@
+<header>
+    <nav>
+    <ul class="nav_links">
+        <li><a href="#!/">HOME</a></li>
+        <li><a href="#!/products">OUR PRODUCTS</a></li>
+        <li><a href="#!/cart">CART</a></li>
+        <li><a href="#!/aboutus">ABOUT US</a></li>
+        <li><a href="#!/login" ng-if="!username">LOGIN</a></li>
+        <li><a ng-if="username" ng-click="logout()">LOGOUT</a></li>
+    </ul>
+    </nav>
+    <a href="#!/signup" class="nav_button" ng-if="!username"><button>SIGN UP</button></a>
+    <a href="#!/" class="nav_button" ng-if="username"><button>{{username | uppercase}}</button></a>
+</header>
+
+<div class="outerdiv">
+    <div class="leftdiv">
+    <figure>
+        <img ng-src='{{ourstoryimage}}'>
+    </figure>
+    </div>
+    <div class="rightdiv">
+        <h2>Get to Know Us</h2>
+        <p>{{ourstory}}</p>
+    </div>
+</div>
+    
+<div class="contact-us">
+    <p>Contact Us</p>
+</div>
+    
+<div>
+    <div class="row">
+    <div class="column">
+    <form id="contact-form" name="contactForm" ng-submit="submitForm()" novalidate>
+        <label for="fname">Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your Name.." ng-model="formData.name" ng-pattern="/^[a-zA-Z ]+$/" required>
+        <div ng-messages="contactForm.firstname.$error" class="error-message" ng-if="contactForm.firstname.$dirty || contactForm.$submitted">
+            <div ng-message="required">Name is required.</div>
+            <div ng-message="pattern">Name should only contain letters.</div>
+        </div>
+    
+        <label for="mobilenumber">Mobile Number</label>
+        <input type="text" id="mobilenumber" name="mobilenumber" placeholder="Your MobileNumber.." ng-model="formData.mobile" ng-pattern="/^\d{10}$/" required>
+        <div ng-messages="contactForm.mobilenumber.$error" class="error-message" ng-if="contactForm.mobilenumber.$dirty || contactForm.$submitted">
+            <div ng-message="required">Mobile number is required.</div>
+            <div ng-message="pattern">Mobile number should be a 10-digit number.</div>
+        </div>
+    
+        <label for="mail">Email</label>
+        <input type="email" id="mail" name="email" placeholder="Your Email.." ng-model="formData.email" required>
+        <div ng-messages="contactForm.email.$error" class="error-message" ng-if="contactForm.email.$dirty || contactForm.$submitted">
+            <div ng-message="required">Email is required.</div>
+            <div ng-message="email">Invalid email format.</div>
+        </div>
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Your Message.." ng-model="formData.subject" required></textarea>
+        <div ng-messages="contactForm.subject.$error" class="error-message" ng-if="contactForm.subject.$dirty || contactForm.$submitted">
+            <div ng-message="required">Subject is required.</div>
+        </div>
+    
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+    <div class="column">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.6209038522506!2d78.07897797490978!3d9.882137375051911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c58f98cfb84d%3A0x29f51efea3e84bf2!2sThiagarajar%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1693312125341!5m2!1sen!2sin" width="700" height="400" loading="lazy" referrerpolicy="no-referrer-when-downgrad"></iframe>
+    </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <a href=""><i class="fa fa-instagram fa-2x social"></i></a>
+        <a href=""><i class="fa fa-facebook fa-2x social"></i></a>
+        <a href=""><i class="fa fa-twitter fa-2x social"></i></a>
+        <a href=""><i class="fa fa-linkedin fa-2x social"></i></a>
+        <a href=""><i class="fa fa-youtube-play fa-2x social"></i></a>
+    </div>
+</footer>

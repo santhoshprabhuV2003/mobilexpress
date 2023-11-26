@@ -1,0 +1,37 @@
+<header>
+    <nav>
+    <ul class="nav_links">
+        <li><a href="#!/">HOME</a></li>
+        <li><a href="#!/products">OUR PRODUCTS</a></li>
+        <li><a href="#!/cart">CART</a></li>
+        <li><a href="#!/aboutus">ABOUT US</a></li>
+        <li><a href="#!/login">LOGIN</a></li>
+    </ul>
+    </nav>
+    <a href="#!/signup" class="nav_button"><button>SIGN UP</button></a>
+</header>
+
+<div class="signup">
+    <h2>Sign Up</h2>
+    <p>Please fill this form to create an account.</p>
+    <form ng-submit="signup()" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="field" ng-model="userData.username" required>
+        </div>
+        <div>
+            <label for="phoneNumber">Phone Number (10 digits only):</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" class="field" ng-model="userData.phoneNumber" ng-pattern="/^\d{10}$/" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="field" ng-model="userData.password" ng-minlength="6" ng-maxlength="10" required>
+        </div>
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" class="field" ng-model="confirmPassword" required>
+        </div>
+        <button type="submit">SIGN UP</button>
+        <p>Already have an account!! <a href="#!/login">Click here to Login</a></p>
+    </form>
+</div>

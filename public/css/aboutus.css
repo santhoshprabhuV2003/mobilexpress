@@ -1,0 +1,103 @@
+.outerdiv {
+    display: flex;
+}
+
+.leftdiv {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftdiv img {
+    height: 80%;
+    position: relative;
+}
+
+.rightdiv {
+    flex: 1;
+    background-color: white;
+    padding: 35px;
+}
+
+.rightdiv h2 {
+    margin-bottom: 20px;
+}
+
+.rightdiv p {
+    line-height: 1.5;
+}
+
+.contact-us {
+    height: 130px;
+    width: 100%;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.contact-us p {
+    padding-top: 35px;
+    font-size: 45px;
+}
+
+input[type=text],input[type=email], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+  
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+iframe {
+    margin: 10px;
+    border: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 15px;
+    margin-bottom: 10px;
+    animation: fade-in 0.5s;
+}
+  
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+}
