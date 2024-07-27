@@ -201,7 +201,7 @@ app.controller('adminctrl', ['$scope', '$http', function($scope,$http) {
     $scope.update = {};
 
     $scope.addproduct = function() {
-        $http.post('/api/addproduct', $scope.product)
+        $http.post('/product', $scope.product)
             .then(function(response) {
                 alert(response.data.message);
                 $scope.product = {};
@@ -212,7 +212,7 @@ app.controller('adminctrl', ['$scope', '$http', function($scope,$http) {
     };
 
     $scope.deleteproduct = function() {
-        $http.post('/api/deleteproduct', $scope.delete)
+        $http.delete('/product', $scope.delete)
             .then(function(response) {
                 alert(response.data.message);
                 $scope.delete = {};
@@ -223,7 +223,7 @@ app.controller('adminctrl', ['$scope', '$http', function($scope,$http) {
     };
 
     $scope.updateproduct = function() {
-        $http.post('/api/updateproduct', $scope.update)
+        $http.patch('/product', $scope.update)
             .then(function(response) {
                 alert(response.data.message);
                 $scope.update = {};
